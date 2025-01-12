@@ -1,0 +1,109 @@
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #000; /* Fondo global negro */
+    color: #39ff14; /* Texto principal verde fluorescente */
+}
+
+/* Hero section */
+#inicio {
+    color: #39ff14;
+    text-shadow: 2px 2px 4px rgba(57, 255, 20, 0.7);
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000 !important; /* Fondo negro */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #39ff14 !important; /* Texto verde fluorescente */
+}
+
+.nav-link {
+    color: #39ff14 !important;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-link:hover {
+    color: #00ff00 !important; /* Verde más brillante */
+    text-shadow: 0 0 8px #00ff00;
+}
+
+/* Servicios */
+#servicios {
+    background-color: #111; /* Fondo gris oscuro */
+    color: #39ff14; /* Texto verde fluorescente */
+}
+
+#servicios i {
+    color: #39ff14;
+    transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+}
+
+#servicios i:hover {
+    transform: scale(1.2);
+    color: #00ff00;
+    text-shadow: 0 0 8px #00ff00;
+}
+
+/* Equipo */
+#equipo {
+    background-color: #000; /* Fondo negro */
+    color: #39ff14;
+}
+
+#equipo img {
+    border: 4px solid #39ff14;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+#equipo img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px #00ff00;
+}
+
+/* Proyectos */
+#proyectos {
+    background-color: #111; /* Fondo gris oscuro */
+    color: #39ff14;
+}
+
+.card {
+    background-color: #000; /* Fondo de las tarjetas negro */
+    border: 1px solid #39ff14;
+    color: #39ff14;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px #00ff00;
+}
+
+/* Formulario */
+form .form-control {
+    border-radius: 10px;
+    border: 1px solid #39ff14;
+    background-color: #000; /* Fondo negro */
+    color: #39ff14;
+}
+
+form .form-control:focus {
+    border-color: #00ff00;
+    box-shadow: 0 0 8px #00ff00;
+}
+
+form button {
+    border-radius: 20px;
+    background: #39ff14;
+    color: #000;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+form button:hover {
+    background: #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+}

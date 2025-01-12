@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones IT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">IT Solutions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <section id="inicio" class="text-center text-white" style="background: url('hero.jpg') no-repeat center; background-size: cover; height: 100vh;">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div>
+                <h1 class="display-4 fw-bold">Bienvenido a Soluciones IT</h1>
+                <p class="lead">Resolviendo problemas y desarrollando el futuro digital</p>
+                <a href="#servicios" class="btn btn-light btn-lg mt-3">Explora Nuestros Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold">Nuestros Servicios</h2>
+            <div class="row text-center mt-4">
+                <div class="col-md-4">
+                    <i class="fas fa-desktop fa-3x text-primary"></i>
+                    <h4 class="mt-3">Desarrollo Web</h4>
+                    <p>Diseñamos páginas modernas, responsivas y optimizadas.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-mobile-alt fa-3x text-success"></i>
+                    <h4 class="mt-3">Apps Móviles</h4>
+                    <p>Creamos aplicaciones personalizadas para Android y iOS.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-cogs fa-3x text-danger"></i>
+                    <h4 class="mt-3">Soporte IT</h4>
+                    <p>Resolución rápida y eficiente de problemas tecnológicos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold">Proyectos Destacados</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="project1.jpg" class="card-img-top" alt="Proyecto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 1</h5>
+                            <p class="card-text">Descripción del proyecto.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Más tarjetas de proyectos -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo -->
+    <section id="equipo" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold">Nuestro Equipo</h2>
+            <div class="row mt-4 text-center">
+                <div class="col-md-3">
+                    <img src="team1.jpg" alt="Miembro 1" class="rounded-circle" width="120">
+                    <h5 class="mt-2">Juan Pérez</h5>
+                    <p>CEO</p>
+                </div>
+                <!-- Más miembros del equipo -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold">Contacto</h2>
+            <form action="process.php" method="POST">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
