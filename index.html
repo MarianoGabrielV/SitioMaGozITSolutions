@@ -3,124 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MaGoz-Soluciones IT</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Mi Sitio Web</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 <body>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#inicio"> Soluciones IT</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">Mi Sitio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quienes">Quiénes Somos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     
-    <!-- WhatsApp Icon -->
-    <a href="https://wa.me/+541162123307" target="_blank" class="whatsapp-icon" title="Contactar por WhatsApp">
+
+    <!-- Carrusel Mejorado -->
+    <header id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/quiero crear un logo para mi empresa, que contenga como colores principales el negro y verde, el fondo debe de ser color negro, el nombre es MaGoz Soluciones IT (1).jpg" class="d-block w-100 carousel-img" alt="Imagen 1">
+                <div class="carousel-caption">
+                    <h1 class="typed-text"></h1>
+                    <p>Soluciones digitales para tu negocio</p>
+                    <a href="#servicios" class="btn btn-primary">Conocer más</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/fondo2.jpg" class="d-block w-100 carousel-img" alt="Imagen 2">
+                <div class="carousel-caption">
+                    <h1>Diseñamos experiencias digitales</h1>
+                    <p>Tu marca, tu esencia, tu éxito</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/logo3.jpg" class="d-block w-100 carousel-img" alt="Imagen 3">
+                <div class="carousel-caption">
+                    <h1>Convertimos ideas en realidad</h1>
+                    <p>Desarrollo web a medida</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Quiénes Somos -->
+    <section id="quienes" class="container my-5">
+        <h2 class="text-center" data-aos="fade-up">Quiénes Somos</h2>
+        <p class="text-center" data-aos="fade-up">Somos un equipo de expertos en tecnología dedicados a transformar negocios con soluciones innovadoras.</p>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="container my-5">
+        <h2 class="text-center" data-aos="fade-up">Nuestros Servicios</h2>
+        <div class="row">
+            <div class="col-md-4" data-aos="zoom-in">
+                <div class="card">
+                    <img src="servicio1.jpg" class="card-img-top" alt="Servicio 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Diseño Web</h5>
+                        <p class="card-text">Creamos sitios web modernos y responsivos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card">
+                    <img src="servicio2.jpg" class="card-img-top" alt="Servicio 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Marketing Digital</h5>
+                        <p class="card-text">Estrategias digitales para hacer crecer tu negocio.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+                <div class="card">
+                    <img src="servicio3.jpg" class="card-img-top" alt="Servicio 3">
+                    <div class="card-body">
+                        <h5 class="card-title">SEO y SEM</h5>
+                        <p class="card-text">Mejoramos tu visibilidad en buscadores.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Testimonios -->
+    <section id="testimonios" class="container my-5">
+        <h2 class="text-center" data-aos="fade-up">Testimonios</h2>
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-right">
+                <blockquote class="blockquote">
+                    <p>"Excelente servicio, mi sitio web ahora es más rápido y atractivo."</p>
+                    <footer class="blockquote-footer">Juan Pérez</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-6" data-aos="fade-left">
+                <blockquote class="blockquote">
+                    <p>"Gracias al equipo, mis ventas aumentaron un 50% con su estrategia digital."</p>
+                    <footer class="blockquote-footer">María Gómez</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/549123456789" class="whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="text-center text-white"></section>
-
-    
-    
-
-    <!-- Servicios -->
-    <section id="servicios" class="py-5">
-        <div class="container">
-            <h2 class="text-center fw-bold">Nuestros Servicios</h2>
-            <div class="row text-center mt-4">
-                <div class="col-md-4">
-                    <i class="fas fa-desktop fa-3x text-primary"></i>
-                    <h4 class="mt-3">Desarrollo Web</h4>
-                    <p>Diseñamos páginas modernas, responsivas y optimizadas.</p>
-                </div>
-                <div class="col-md-4">
-                    <i class="fas fa-mobile-alt fa-3x text-success"></i>
-                    <h4 class="mt-3">Apps Móviles</h4>
-                    <p>Creamos aplicaciones personalizadas para Android y iOS.</p>
-                </div>
-                <div class="col-md-4">
-                    <i class="fas fa-cogs fa-3x text-danger"></i>
-                    <h4 class="mt-3">Soporte IT</h4>
-                    <p>Resolución rápida y eficiente de problemas tecnológicos.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Proyectos -->
-    <section id="proyectos" class="py-5">
-        <div class="container">
-            <h2 class="text-center fw-bold">Proyectos Destacados</h2>
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="project1.jpg" class="card-img-top" alt="Proyecto 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Proyecto 1</h5>
-                            <p class="card-text">Descripción del proyecto.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Más tarjetas de proyectos -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Equipo -->
-    <section id="equipo" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center fw-bold">Nuestro Equipo</h2>
-            <div class="row mt-4 text-center">
-                <div class="col-md-3">
-                    <img src="team1.jpg" alt="Miembro 1" class="rounded-circle" width="120">
-                    <h5 class="mt-2">Juan Pérez</h5>
-                    <p>CEO</p>
-                </div>
-                <!-- Más miembros del equipo -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="py-5">
-        <div class="container">
-            <h2 class="text-center fw-bold">Contacto</h2>
-            <form action="process.php" method="POST">
-                <div class="mb-3">
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="mensaje" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-        </div>
-    </section>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/script.js"></script>
+
 </body>
 </html>

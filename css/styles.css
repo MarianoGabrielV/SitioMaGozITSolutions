@@ -1,174 +1,98 @@
-/* Estilo global */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #39ff14; /* Texto principal verde fluorescente */
-}
-
-/* Hero Section */
-/* Hero Section */
-#inicio {
-    position: relative;
-    background: url('../img/logo3.jpg') no-repeat center center; /* Imagen de fondo */
-    background-size: cover;
-    height: 100vh; /* Mantiene el alto de toda la ventana */
-    width: 100%; /* Asegura que el ancho cubra toda la pantalla */
-    display: flex;
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    text-align: center; /* Centra el texto dentro */
-}
-
-/* Asegurar compatibilidad para pantallas pequeñas */
-@media (max-width: 768px) {
-    #inicio {
-        background-position: center center;
-        background-attachment: scroll; /* Evita problemas con fixed en móviles */
-    }
+/* Ajustes generales */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: transparent !important;
 }
 
 
-
-#inicio .d-flex {
-    position: relative;
-    z-index: 2; /* Asegura que el contenido esté sobre la capa negra */
+/* Carrusel */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
 }
 
-
-/* Navbar */
-.navbar {
-    background-color: #228B22 !important; 
-    padding: 1rem; /* Aumenta el espaciado general */
-}
-
-.navbar-brand {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: 	#ffffff !important; /* Texto verde fluorescente */
-}
-
-.nav-link {
-    font-size: 1.2rem; /* Aumenta el tamaño de la letra de las opciones */
-    color: #ffffff !important;
-    margin-left: 1.5rem; /* Agrega separación entre los elementos */
-    transition: color 0.3s, text-shadow 0.3s;
-}
-
-.navbar-nav {
-    margin-left: auto; /* Esto centra los enlaces */
-    margin-right: auto; /* Esto ajusta el margen derecho */
-}
-
-.nav-item {
-    margin-right: 10px; /* Espaciado entre los elementos del menú */
-}
-
-.nav-link:hover {
-    color: #00ff00 !important; /* Verde más brillante */
-    text-shadow: 0 0 8px #00ff00;
-}
-
-/* Servicios */
-#servicios {
-    background-color: #228B22; /* Cambia este color al que prefieras */
-    color: #39ff14; /* Mantiene el texto verde fluorescente */
-}
-
-#servicios i {
-    color: #39ff14;
-    transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
-}
-
-#servicios i:hover {
-    transform: scale(1.2);
-    color: #00ff00;
-    text-shadow: 0 0 8px #00ff00;
-}
-
-/* Equipo */
-#equipo {
-    background-color: #000; /* Fondo negro */
-    color: #39ff14;
-}
-
-#equipo img {
-    border: 4px solid #39ff14;
-    transition: transform 0.3s ease, box-shadow 0.3s;
-}
-
-#equipo img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 12px #00ff00;
-}
-
-/* Proyectos */
-#proyectos {
-    background-color: #111; /* Fondo gris oscuro */
-    color: #39ff14;
-}
-
+/* Sección Servicios */
 .card {
-    background-color: #000; /* Fondo de las tarjetas negro */
-    border: 1px solid #39ff14;
-    color: #39ff14;
-    transition: box-shadow 0.3s;
+    transition: transform 0.3s ease-in-out;
 }
 
 .card:hover {
-    box-shadow: 0 0 10px #00ff00;
+    transform: scale(1.05);
 }
 
-/* Formulario */
-form .form-control {
-    border-radius: 10px;
-    border: 1px solid #39ff14;
-    background-color: #000; /* Fondo negro */
-    color: #39ff14;
-}
-
-form .form-control:focus {
-    border-color: #00ff00;
-    box-shadow: 0 0 8px #00ff00;
-}
-
-form button {
-    border-radius: 20px;
-    background: #39ff14;
-    color: #000;
-    transition: background 0.3s, box-shadow 0.3s;
-}
-
-form button:hover {
-    background: #00ff00;
-    box-shadow: 0 0 10px #00ff00;
-}
-
-
-
-/* Estilo para el icono de WhatsApp */
-.whatsapp-icon {
+/* Estilos para el botón flotante de WhatsApp */
+.whatsapp-btn {
     position: fixed;
-    bottom: 20px; /* Distancia desde el fondo de la página */
-    right: 20px;  /* Distancia desde el lado derecho de la página */
-    background-color: #25D366; /* Color de fondo de WhatsApp */
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
     font-size: 30px;
-    color: white; /* Color del ícono */
-    text-decoration: none;
-    z-index: 1000; /* Asegura que el ícono esté encima de otros elementos */
-    transition: background-color 0.3s ease; /* Efecto al pasar el ratón */
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Efecto al pasar el ratón */
-.whatsapp-icon:hover {
-    background-color: #128C7E; /* Color más oscuro de WhatsApp cuando el mouse pasa por encima */
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    background-color: #1ebe57;
 }
 
-/* Estilo para el ícono de Font Awesome */
-.whatsapp-icon i {
-    vertical-align: middle;
+
+
+/* Efecto de zoom en el carrusel */
+.carousel-item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
 
+.carousel-item.active .carousel-img {
+    transform: scale(1.05);
+}
+
+
+/* Navbar completamente transparente */
+.navbar {
+    background: transparent !important;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Quita el fondo del menú desplegable */
+.navbar .navbar-collapse {
+    background: transparent !important;
+}
+
+/* Estilos de los enlaces */
+.navbar .nav-link {
+    color: white !important; /* Blanco para que se vea sobre la imagen */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #25d366 !important; /* Color verde al pasar el mouse */
+}
+
+/* Estilos para el botón de hamburguesa */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-color: transparent;
+}
+
+/* Carrusel a pantalla completa */
+.carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
 
