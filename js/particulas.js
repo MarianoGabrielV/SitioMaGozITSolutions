@@ -1,7 +1,7 @@
 particlesJS("particles-js", {
     particles: {
         number: { value: 50 },
-        color: { value: "#ffffff" },
+        color: { value: "#25d366" }, // Color verde
         shape: { type: "circle" },
         opacity: { value: 0.5 },
         size: { value: 3 },
@@ -12,26 +12,28 @@ particlesJS("particles-js", {
         },
     },
     interactivity: {
-        detect_on: "canvas",
+        detect_on: "window",
         events: {
             onhover: {
                 enable: true,
-                mode: "grab",
+                mode: "repulse", // Hace que las partículas se alejen del mouse
             },
             onclick: {
                 enable: true,
-                mode: "push",
+                mode: "push", // Agrega partículas al hacer clic
             },
         },
         modes: {
             grab: {
                 distance: 200,
-                line_linked: {
-                    opacity: 1,
-                },
+                line_linked: { opacity: 1 },
+            },
+            repulse: {
+                distance: 100, // Distancia a la que las partículas se alejan del cursor
+                duration: 0.4, // Duración del efecto
             },
             push: {
-                particles_nb: 4,
+                particles_nb: 4, // Número de partículas generadas al hacer clic
             },
         },
     },
