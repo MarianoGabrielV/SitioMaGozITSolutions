@@ -162,12 +162,12 @@ html, body {
 }
 
 h2 {
-    color: #333; /* Color oscuro para los títulos */
+    color: #ffffff;
     margin-bottom: 1.5rem; /* Espaciado inferior */
 }
 
 p, .card-text, blockquote {
-    color: #555; /* Color gris para los textos */
+    color: #ffffff;
 }
 
 .card {
