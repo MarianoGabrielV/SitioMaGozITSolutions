@@ -38,6 +38,9 @@ html, body {
     width: 60px;
     height: 60px;
 }
+.fa-whatsapp {
+    transform: translate(2px, -7px);
+}
 
 .whatsapp-btn:hover {
     transform: scale(1.1);
