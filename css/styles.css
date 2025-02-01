@@ -61,24 +61,46 @@ html, body {
 }
 
 
-/* Navbar completamente transparente */
+/* Navbar inicialmente semi-transparente */
 .navbar {
-    background: transparent !important;
-    position: absolute;
+    background: rgba(0, 0, 0, 0.5) !important; /* Fondo semi-transparente */
+    position: fixed; /* Fija la barra en la parte superior */
     width: 100%;
     z-index: 1000;
+    padding: 1rem 0; /* Espaciado interno */
+    transition: all 0.5s ease-in-out; /* Transición suave para todos los cambios */
 }
 
-/* Quita el fondo del menú desplegable */
-.navbar .navbar-collapse {
-    background: transparent !important;
+/* Navbar con fondo sólido al hacer scroll */
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.9) !important; /* Fondo oscuro sólido */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    padding: 0.5rem 0; /* Reducir el espaciado al hacer scroll */
 }
 
 /* Estilos de los enlaces */
 .navbar .nav-link {
-    color: white !important; /* Blanco para que se vea sobre la imagen */
+    color: white !important; /* Texto blanco */
     font-weight: bold;
-    transition: color 0.3s;
+    margin: 0 1rem; /* Espaciado entre enlaces */
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Efecto de subrayado al pasar el mouse */
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #25d366; /* Color verde */
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%; /* Subrayado completo al pasar el mouse */
 }
 
 .navbar .nav-link:hover {
@@ -88,12 +110,38 @@ html, body {
 /* Estilos para el botón de hamburguesa */
 .navbar-toggler {
     border: none;
+    outline: none;
 }
 
 .navbar-toggler-icon {
-    background-color: transparent;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Ícono blanco */
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Animación del botón de hamburguesa al abrir */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    transform: rotate(90deg); /* Gira el ícono 90 grados */
+}
+
+/* Estilos para el menú desplegable en móviles */
+.navbar-collapse {
+    
+    padding: 1rem;
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 991.98px) {
+    .navbar .nav-link {
+        margin: 0.5rem 0; /* Espaciado entre enlaces en móviles */
+        text-align: center; /* Centrar texto */
+    }
+
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.9) !important; /* Fondo oscuro en móviles */
+    }
+}
 /* Carrusel a pantalla completa */
 .carousel-item {
     height: 100vh;
@@ -101,3 +149,39 @@ html, body {
     background-position: center;
 }
 
+
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #000;
+}
+
+h2 {
+    color: #333; /* Color oscuro para los títulos */
+    margin-bottom: 1.5rem; /* Espaciado inferior */
+}
+
+p, .card-text, blockquote {
+    color: #555; /* Color gris para los textos */
+}
+
+.card {
+    border: none; /* Quita el borde de las tarjetas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease-in-out; /* Efecto de hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+blockquote {
+    border-left: 5px solid #25d366; /* Línea lateral verde */
+    padding-left: 1rem;
+    font-style: italic;
+}
